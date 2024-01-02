@@ -11,3 +11,44 @@
     @content;
   }
 }
+
+@mixin text-styles($font-size, $line-height, $font-weight) {
+  font-size: calc($font-size / $font-size-base) * 1rem * $ratio;
+  line-height: calc($line-height / $font-size-base) * 1rem * $ratio;
+  font-weight: $font-weight;
+}
+
+@mixin container-layout($padding-top, $padding, $gutter) {
+  display: flex;
+  padding: $padding-top $padding $padding $padding;
+  gap: $gutter;
+
+  > * {
+    box-sizing: border-box;
+  }
+}
+// regular container without headline by default;
+@mixin regular-container($hasHeadline:false) {
+  //mobile mode
+  @if $hasHeadline {
+    @include container-layout(36px, 24px, 24px);
+  }@else {
+    @include container-layout(24px, 24px, 24px);
+  }
+  //desktop/tablet
+  @include tablet {
+    @if $hasHeadline {
+      @include container-layout(54px, 36px, 36px);
+    }@else {
+      @include container-layout(36px, 36px, 36px);
+    }
+  }
+}
+
+
+@mixin elements-glutter {
+  gap:24px;
+  @include tablet {
+      gap:36px;;
+  }
+}

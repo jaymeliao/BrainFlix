@@ -1,9 +1,9 @@
 import './App.scss';
-
+import Header from './components/Header/Header';
 function App() {
   return (
     <div className="App">
-      <h1>BMX Rampage: 2021 Highlights</h1>
+     <Header/>
     </div>
   );
 }

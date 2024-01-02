@@ -1,0 +1,29 @@
+
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.button {
+    background-color: $BrainFlix-Blue;
+    color:$BrainFlix-White;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    flex:1;
+    position: relative;
+    height: 60px;
+    box-sizing: border-box;
+  }
+  
+  .icon {
+    margin-right: 0.5rem;
+    position: absolute;
+    left: 1rem;
+    top:18px;
+  }
+  
+  .text {
+    text-align: center;
+    // Add additional styling for the text container if needed
+  }
+  

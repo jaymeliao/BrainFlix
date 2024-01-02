@@ -1,0 +1,26 @@
+
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.header {
+    @include regular-container;
+    display: flex;
+    flex-direction: column;
+    .logo{
+        height: 36px;
+    }
+    .search_bar {
+        display: flex;
+        flex-direction: column;
+        @include elements-glutter;
+        .input_section{
+            display: flex;
+            @include elements-glutter;
+            .search_input{
+                flex: 1;  
+                background-color: red;   
+            }
+        }
+    }
+     
+}

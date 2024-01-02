@@ -1,0 +1,24 @@
+
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+input {
+    flex: 1; 
+    border-radius: 4px;
+    height: 50px;
+    padding-left: 3rem;
+    border: 2px solid $BrainFlix-Mercury;
+    background-color: $BrainFlix-Alabaster;
+    background-image: url("../../assets/icons/search.svg");
+    background-size: 24px; 
+    background-position: 15px center;
+    background-repeat: no-repeat;
+    &:focus {
+      border: 2px solid $BrainFlix-Blue;
+      outline: none;
+      background-color: white;
+    }
+    &::placeholder {
+        color: $BrainFlix-DarkBlack;
+    }
+    
+}
