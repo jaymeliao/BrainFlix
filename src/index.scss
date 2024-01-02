@@ -1,10 +1,16 @@
+@use "./styles/partials/fonts" as *;
+@use "./styles/partials/mixins" as *;
+@use "./styles/partials/variables" as *;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'AvenirNext LT Pro';
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+h1 {
+  font-weight: 700;
 }
 
 code {
