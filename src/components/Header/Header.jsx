@@ -4,8 +4,8 @@ import logo from "../../assets/logo/BrainFlix-logo.svg";
 import Avatar from "../Avatar/Avatar";
 import mohan_muruge from "../../assets/images/Mohan-muruge.jpg";
 import uploadIcon from "../../assets/icons/upload.svg";
-import FormButton from "../FormButton/FormButton";
-import FormInput from "../FormInput/FormInput";
+import FormButton from "../Form/FormButton/FormButton";
+import FormInput from "../Form/FormInput/FormInput";
 
 function Header() {
   const handleSummit = () => {

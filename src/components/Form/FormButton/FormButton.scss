@@ -1,6 +1,6 @@
 
-@use "../../styles/partials/variables" as *;
-@use "../../styles/partials/mixins" as *;
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/mixins" as *;
 
 .button {
     background-color: $BrainFlix-Blue;
@@ -11,19 +11,20 @@
     outline: none;
     flex:1;
     position: relative;
-    height: 60px;
+    height: 50px;
     box-sizing: border-box;
+    min-width: 160px;
   }
   
   .icon {
     margin-right: 0.5rem;
     position: absolute;
     left: 1rem;
-    top:18px;
+    top:13px;
   }
   
   .text {
     text-align: center;
-    // Add additional styling for the text container if needed
+
   }
   
