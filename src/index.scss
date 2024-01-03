@@ -2,6 +2,11 @@
 @use "./styles/partials/mixins" as *;
 @use "./styles/partials/variables" as *;
 
+* {
+  font-family: 'AvenirNext LT Pro';
+}
+
+
 body {
   margin: 0;
   font-family: 'AvenirNext LT Pro';

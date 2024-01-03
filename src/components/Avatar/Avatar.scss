@@ -1,10 +1,10 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-.profile_photo{
+.profile {
     border-radius: 50%;
-    width: 58px;
-    height: 58px;
+    width: 44px;
+    height: 44px;
     object-fit: cover;
     @include tablet{
         width: 40px;

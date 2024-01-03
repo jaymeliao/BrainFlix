@@ -2,11 +2,11 @@
 import React from "react";
 import './Avatar.scss'
 
-const Avatar = ({ imageUrl}) => {
+const Avatar = ({ className, imageUrl}) => {
   return (
     <img
       src={imageUrl}
-      className="profile_photo"
+      className={`${className} profile`}
     />
   );
 };

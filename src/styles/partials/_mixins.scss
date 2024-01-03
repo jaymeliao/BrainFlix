@@ -31,24 +31,24 @@
 @mixin regular-container($hasHeadline:false) {
   //mobile mode
   @if $hasHeadline {
-    @include container-layout(36px, 24px, 24px);
+    @include container-layout(24px, 16px, 16px);
   }@else {
-    @include container-layout(24px, 24px, 24px);
+    @include container-layout(16px, 16px, 16px);
   }
   //desktop/tablet
   @include tablet {
     @if $hasHeadline {
-      @include container-layout(54px, 36px, 36px);
+      @include container-layout(36px, 24px, 24px);
     }@else {
-      @include container-layout(36px, 36px, 36px);
+      @include container-layout(24px, 24px, 24px);
     }
   }
 }
 
 
 @mixin elements-glutter {
-  gap:24px;
+  gap:16px;
   @include tablet {
-      gap:36px;;
+      gap:24px;;
   }
 }

@@ -2,9 +2,9 @@
 import React from 'react';
 import './FormInput.scss';
 
-const FormInput = ({placeholder, type}) => {
+const FormInput = ({className, placeholder, type}) => {
   return (
-    <input type={type} placeholder={placeholder} />
+    <input className={className} type={type} placeholder={placeholder} />
   );
 };
 

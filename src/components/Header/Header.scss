@@ -7,20 +7,24 @@
     display: flex;
     flex-direction: column;
     .logo{
-        height: 36px;
+        height: 28px;
     }
     .search_bar {
         display: flex;
         flex-direction: column;
         @include elements-glutter;
-        .input_section{
+        .parts {
             display: flex;
-            @include elements-glutter;
             .search_input{
-                flex: 1;  
-                background-color: red;   
+               flex:1;  
+            }
+            @include elements-glutter;
+
+            .profile_photo {
+                display:none;
             }
         }
+        
     }
      
 }

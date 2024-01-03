@@ -16,17 +16,29 @@ function Header() {
     <div className="header">
       <img className="logo" src={logo} alt="Brain Flix Logo" />
       <div className="search_bar">
-        <div className="input_section">
-          <FormInput className="search_input" type="text" placeholder="Search" />
-          <Avatar imageUrl={mohan_muruge} altText="Avatar" />
+        <div className="parts">
+          <FormInput
+            className="search_input"
+            type="text"
+            placeholder="Search"
+          />
+          <Avatar
+            className="profile_photo"
+            imageUrl={mohan_muruge}
+            altText="Avatar"
+          />
         </div>
-        <div>
-        <FormButton
-          icon={<img src={uploadIcon} />}
-          text="Upload"
-          onClick={handleSummit}
-        />
-        <Avatar imageUrl={mohan_muruge} altText="Avatar" />
+        <div className="parts">
+          <FormButton
+            icon={<img src={uploadIcon} />}
+            text="Upload"
+            onClick={handleSummit}
+          />
+          <Avatar
+            className="profile_photo"
+            imageUrl={mohan_muruge}
+            altText="Avatar"
+          />
         </div>
       </div>
     </div>
