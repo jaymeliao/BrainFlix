@@ -14,7 +14,7 @@ const FormInput = (props) => {
   };
 
   const Tag = props.isTextarea ? 'textarea' : 'input';
-  return <Tag style={otherStyle} className={`form-input ${props.className}`} type={props.type} placeholder={props.placeholder} {...props} />;
+  return <Tag style={otherStyle} className={`form-input ${props.className}`} type={props.type} placeholder={props.placeholder} {...props} rows={props.row} />;
 };
 
 export default FormInput;

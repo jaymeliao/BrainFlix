@@ -21,10 +21,20 @@
       @include tablet {
         flex-direction: row;
       }
-      .user-conversation__input-section {
+      &__input-section {
         display: flex;
         flex: 1;
         flex-direction: column;
+        .comment_input {
+          @include tablet {
+            height: 24px;
+          }
+          overflow-y: hidden;
+        }
+      }
+      &__button-section {
+        display: flex;
+        align-items: flex-end;
       }
     }
   }

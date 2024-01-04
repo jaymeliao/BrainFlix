@@ -18,9 +18,11 @@ const CommentSection = ({ commentList }) => {
         <div className="user-conversation">
           <div className="user-conversation__input-section">
             <label>JOIN THE CONVERATION</label>
-            <FormInput isTextarea={true} className="comment_input form-input" type="text" placeholder="Add a new comment" />
+            <FormInput isTextarea={true} className="comment_input form-input" type="text" placeholder="Add a new comment" rows={2} />
           </div>
-          <FormButton icon={<img src={commentIcon} />}text="commnet" onClick={()=>{console.log("comment!!")}}/> 
+          <div className="user-conversation__button-section">
+          <FormButton class="button" icon={<img src={commentIcon} />}text="commnet" onClick={()=>{console.log("comment!!")}}/> 
+          </div>
         </div>
       </div>
     </div>
