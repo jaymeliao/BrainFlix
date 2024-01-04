@@ -4,13 +4,9 @@
 input {
     border-radius: 5px;
     height: 40px;
-    padding-left: 3rem;
     border: 1.5px solid $BrainFlix-Mercury;
     background-color: $BrainFlix-Alabaster;
-    background-image: url("../../../assets/icons/search.svg");
-    background-size: 24px; 
-    background-position: 15px center;
-    background-repeat: no-repeat;
+
     &:focus {
       border: 1.5px solid $BrainFlix-Blue;
       outline: none;

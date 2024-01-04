@@ -6,11 +6,16 @@
 
 * {
   font-family: 'AvenirNext LT Pro';
+  margin: 0;
+  padding: 0;
 }
 
 
 body {
   margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+
   font-family: 'AvenirNext LT Pro';
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -18,15 +23,16 @@ body {
 }
 
 //main header
+
 h1 {
-  @include text-styles(24,32,700);
+  @include text-styles(24,32,600);
   @include tablet {
     @include text-styles(24,32,700);
   }
 }
 //sub header
 h2 {
-  @include text-styles(13,18,700);
+  @include text-styles(13,18,600);
   @include tablet {
     @include text-styles(14,22,700);
   }

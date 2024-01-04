@@ -1,11 +1,19 @@
+import React from "react";
+import "./FormInput.scss";
 
-import React from 'react';
-import './FormInput.scss';
+const FormInput = ({ iconImage, className, placeholder, type }) => {
+  
+  const otherStyle = iconImage ? {
+    backgroundImage: `url(${iconImage})`,
+    paddingLeft: '3rem',
+    backgroundSize: '24px',
+    backgroundPosition: '15px center',
+    backgroundRepeat: 'no-repeat',
+  } : {
+    paddingLeft: '1rem',
+  };
 
-const FormInput = ({className, placeholder, type}) => {
-  return (
-    <input className={className} type={type} placeholder={placeholder} />
-  );
+  return <input style={otherStyle} className={className} type={type} placeholder={placeholder} />;
 };
 
 export default FormInput;

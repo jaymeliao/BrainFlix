@@ -1,0 +1,39 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+.video-details-section {
+  @include regular-container(true);
+  .info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 24px;
+    @include sub-container;
+    border-top: 2px solid $BrainFlix-Mercury;
+    border-bottom: 2px solid $BrainFlix-Mercury;
+    @include tablet {
+      margin-top: 0px;
+      border-top: none;
+    }
+    &__right,
+    &__left {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      @include tablet {
+        flex-direction: row;
+        gap: 24px;
+      }
+      p {
+        color: $BrainFlix-Silver;
+        &.likeButton{
+            cursor: "pointer";
+        }
+      }
+
+    }
+  }
+
+  .description-container {
+    @include sub-container;
+  }
+}

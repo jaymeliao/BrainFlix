@@ -6,6 +6,7 @@ import mohan_muruge from "../../assets/images/Mohan-muruge.jpg";
 import uploadIcon from "../../assets/icons/upload.svg";
 import FormButton from "../Form/FormButton/FormButton";
 import FormInput from "../Form/FormInput/FormInput";
+import icon from "../../assets/icons/search.svg"
 
 function Header() {
   const handleSummit = () => {
@@ -18,6 +19,7 @@ function Header() {
       <div className="search_bar">
         <div className="parts">
           <FormInput
+            iconImage={icon}
             className="search_input"
             type="text"
             placeholder="Search"
