@@ -1,10 +1,10 @@
 import React from "react";
 import "./FormInput.scss";
 
-const FormInput = ({ iconImage, className, placeholder, type }) => {
+const FormInput = (props) => {
   
-  const otherStyle = iconImage ? {
-    backgroundImage: `url(${iconImage})`,
+  const otherStyle = props.iconImage ? {
+    backgroundImage: `url(${props.iconImage})`,
     paddingLeft: '3rem',
     backgroundSize: '24px',
     backgroundPosition: '15px center',
@@ -13,7 +13,8 @@ const FormInput = ({ iconImage, className, placeholder, type }) => {
     paddingLeft: '1rem',
   };
 
-  return <input style={otherStyle} className={className} type={type} placeholder={placeholder} />;
+  const Tag = props.isTextarea ? 'textarea' : 'input';
+  return <Tag style={otherStyle} className={`form-input ${props.className}`} type={props.type} placeholder={props.placeholder} {...props} />;
 };
 
 export default FormInput;

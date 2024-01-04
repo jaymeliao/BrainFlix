@@ -21,7 +21,7 @@ function Header() {
         <div className="parts">
           <FormInput
             iconImage={icon}
-            className="search_input"
+            className="search_input form-input"
             type="text"
             placeholder="Search"
           />

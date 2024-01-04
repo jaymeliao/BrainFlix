@@ -1,11 +1,16 @@
 
 @use "../../../styles/partials/variables" as *;
 @use "../../../styles/partials/mixins" as *;
-input {
+textarea {
+  resize: none;
+  padding:1rem;
+}
+.form-input {
     border-radius: 5px;
     height: 40px;
     border: 1.5px solid $BrainFlix-Mercury;
     background-color: $BrainFlix-Alabaster;
+    
 
     &:focus {
       border: 1.5px solid $BrainFlix-Blue;
