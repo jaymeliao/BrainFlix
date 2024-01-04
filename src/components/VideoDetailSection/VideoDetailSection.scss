@@ -7,9 +7,10 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top: 24px;
+    margin-bottom: 24px;
     @include sub-container;
-    border-top: 2px solid $BrainFlix-Mercury;
-    border-bottom: 2px solid $BrainFlix-Mercury;
+    border-top: 1px solid $BrainFlix-Mercury;
+    border-bottom: 1px solid $BrainFlix-Mercury;
     @include tablet {
       margin-top: 0px;
       border-top: none;
@@ -33,7 +34,5 @@
     }
   }
 
-  .description-container {
-    @include sub-container;
-  }
+ 
 }

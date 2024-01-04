@@ -1,0 +1,31 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.comment-section {
+  @include regular-container;
+  .comment-form {
+    @include sub-container;
+    display: flex;
+    .user-profile {
+      display: flex;
+      align-items: flex-start;
+      @include tablet {
+        align-items: flex-end;
+      }
+    }
+    .user-conversation {
+      display: flex;
+      flex: 1;
+      gap: 16px;
+      flex-direction: column;
+      @include tablet {
+        flex-direction: row;
+      }
+      .user-conversation__input-section {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+      }
+    }
+  }
+}

@@ -8,6 +8,7 @@ import FormButton from "../Form/FormButton/FormButton";
 import FormInput from "../Form/FormInput/FormInput";
 import icon from "../../assets/icons/search.svg"
 
+
 function Header() {
   const handleSummit = () => {
     console.log("summit");
