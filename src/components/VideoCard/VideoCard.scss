@@ -1,7 +1,7 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
-.video {
+.video-card {
   @include sub-container;
   display: flex;
   max-width: 500px;
