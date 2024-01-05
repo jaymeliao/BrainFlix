@@ -4,7 +4,7 @@ import React from "react";
 
 function VideoCard({ imageUrl, title, channel }) {
   return (
-    <div className="video-card">
+    <div className="video-card" >
       <img className="video-card__thumbnail" src={imageUrl} />
       <div className="video-card__info">
         <h2>{title}</h2>
