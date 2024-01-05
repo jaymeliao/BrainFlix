@@ -5,7 +5,7 @@ import viewsIcon from "../../assets/icons/views.svg";
 
 const VideoDetailSection = ({ video }) => {
   const [isLiked, setIsLiked] = useState(false);
-  const likesString = video.likes
+  const likesString = video.likes;
   const likesWithoutComma = likesString.replace(/,/g, ''); // Remove commas
   const likesNumber = parseInt(likesWithoutComma);
   const [likesCount, setLikesCount] = useState(likesNumber)

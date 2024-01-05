@@ -16,6 +16,10 @@ function HomePage() {
   const [currentVideoDetail, setCurrentVideoDetail] = useState(allVideosDetail[0])
   const [otherVideoList, setOtherVideoList] = useState(allVideos.filter((video)=>video.id!==currentVideoDetail.id))
 
+  const handleSelectVideo = selectedVideo => {
+    setCurrentVideoDetail(selectedVideo);
+    setOtherVideoList(allVideos.filter(video => video.id !== selectedVideo.id));
+  };
   
 
   return (
@@ -28,7 +32,7 @@ function HomePage() {
           <CommentSection commentList={currentVideoDetail.comments} />
         </div>
         <div className="container__right">
-          <NextVideosSection videoList={otherVideoList} />
+          <NextVideosSection videoList={otherVideoList} onSelectVideo={handleSelectVideo} />
         </div>
       </div>
     </>
