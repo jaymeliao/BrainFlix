@@ -24,6 +24,7 @@ function Header() {
             className="search_input form-input"
             type="text"
             placeholder="Search"
+            istextarea="false"
           />
           <Avatar
             className="profile_photo"

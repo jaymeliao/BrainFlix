@@ -34,7 +34,7 @@ h1 {
 h2 {
   @include text-styles(13,18,600);
   @include tablet {
-    @include text-styles(14,22,700);
+    @include text-styles(14,22,600);
   }
 }
 
@@ -54,10 +54,11 @@ button {
   }
 }
 
-input {
-  @include text-styles(10,20,400);
+input,
+textarea {
+  @include text-styles(10,15,400);
   @include tablet {
-    @include text-styles(12,20,400);
+    @include text-styles(12,17,400);
   }
 }
 

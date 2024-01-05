@@ -1,0 +1,46 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.comment-form {
+
+  @include sub-container;
+  display: flex;
+  .user-profile {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 2rem;
+
+    @include tablet {
+      padding-top: 0rem;
+      align-items: flex-end;
+    }
+  }
+  .user-conversation {
+    label {
+      color: $BrainFlix-Silver;
+    }
+    display: flex;
+    flex: 1;
+    gap: 16px;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+    }
+    &__input-section {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      .comment_input {
+        @include tablet {
+          height: 24px;
+          
+        }
+  
+      }
+    }
+    &__button-section {
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+}

@@ -1,30 +1,16 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import "./CommentSection.scss";
-import userImage from "../../assets/images/Mohan-muruge.jpg";
-import FormInput from "../Form/FormInput/FormInput";
-import FormButton from "../Form/FormButton/FormButton";
-import commentIcon from "../../assets/icons/add_comment.svg"
-import Avatar from "../Avatar/Avatar";
+
+import CommentForm from "../CommentForm/CommentForm";
+import CommentList from "../CommentList/CommentList";
 
 const CommentSection = ({ commentList }) => {
   return (
     <div className="comment-section">
       <h2>{commentList.length} Comments</h2>
-      <div className="comment-form">
-        <div className="user-profile">
-          <Avatar imageUrl={userImage}/>
-        </div>
-        <div className="user-conversation">
-          <div className="user-conversation__input-section">
-            <label>JOIN THE CONVERATION</label>
-            <FormInput isTextarea={true} className="comment_input form-input" type="text" placeholder="Add a new comment" rows={2} />
-          </div>
-          <div className="user-conversation__button-section">
-          <FormButton class="button" icon={<img src={commentIcon} />}text="commnet" onClick={()=>{console.log("comment!!")}}/> 
-          </div>
-        </div>
-      </div>
+      <CommentForm />
+      <CommentList commentList={commentList} />
     </div>
   );
 };

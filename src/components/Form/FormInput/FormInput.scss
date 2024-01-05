@@ -4,14 +4,13 @@
 textarea {
   resize: none;
   padding:0.8rem;
+  overflow: hidden; /* Hide the scroll bar */
 }
 .form-input {
     border-radius: 5px;
-    height: 40px;
+    height: 42px;
     border: 1.5px solid $BrainFlix-Mercury;
     background-color: $BrainFlix-Alabaster;
-    
-
     &:focus {
       border: 1.5px solid $BrainFlix-Blue;
       outline: none;

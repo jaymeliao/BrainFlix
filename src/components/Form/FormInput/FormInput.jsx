@@ -13,7 +13,7 @@ const FormInput = (props) => {
     paddingLeft: '1rem',
   };
 
-  const Tag = props.isTextarea ? 'textarea' : 'input';
+  const Tag = props.istextarea==="true" ? 'textarea' : 'input';
   return <Tag style={otherStyle} className={`form-input ${props.className}`} type={props.type} placeholder={props.placeholder} {...props} rows={props.row} />;
 };
 
