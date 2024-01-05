@@ -1,0 +1,25 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.video {
+  @include sub-container;
+  display: flex;
+  max-width: 500px;
+
+  &__thumbnail {
+    border-radius: 4px;
+    object-fit: cover;
+    width: 150px;
+    height: 90px;
+    @include tablet {
+      width: 200px;
+      height: 120px;
+    }
+  }
+  &__info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

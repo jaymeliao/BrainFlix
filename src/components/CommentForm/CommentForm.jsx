@@ -26,7 +26,7 @@ const CommentForm = ({ commentList }) => {
         </div>
         <div className="user-conversation__button-section">
           <FormButton
-            class="button"
+            className="button"
             icon={<img src={commentIcon} />}
             text="commnet"
             onClick={() => {

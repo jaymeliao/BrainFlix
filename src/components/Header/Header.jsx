@@ -18,7 +18,7 @@ function Header() {
     <div className="header">
       <img className="logo" src={logo} alt="Brain Flix Logo" />
       <div className="search_bar">
-        <div className="parts">
+        <div className="parts parts--left">
           <FormInput
             iconImage={icon}
             className="search_input form-input"
@@ -34,6 +34,7 @@ function Header() {
         </div>
         <div className="parts">
           <FormButton
+            className="search-button"
             icon={<img src={uploadIcon} />}
             text="Upload"
             onClick={handleSummit}

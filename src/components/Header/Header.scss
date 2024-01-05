@@ -1,56 +1,58 @@
-
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
 .header {
-    @include regular-container;
- 
+  @include regular-container;
+
+  display: flex;
+  flex-direction: column;
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    height: 28px;
+    @include tablet {
+      height: 40px;
+    }
+  }
+  .search_bar {
     display: flex;
     flex-direction: column;
+    // background-color: red;
     @include tablet {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+      flex-direction: row;
     }
-    .logo{
-        height: 28px;
-        @include tablet {
-            height: 40px;
+    @include elements-glutter;
+    .parts {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .search_input {
+        flex: 1;
+      }
+      @include elements-glutter;
+      &:nth-child(1) {
+        .profile_photo {
+          @include tablet {
+            display: none;
+          }
         }
+      }
+      &:nth-child(2) {
+        .search-button {
+          @include desktop {
+            max-width: 180px;
+          }
+        }
+        .profile_photo {
+          display: none;
+          @include tablet {
+            display: inline-block;
+          }
+        }
+      }
     }
-    .search_bar {
-        display: flex;
-        flex-direction: column;
-        // background-color: red;
-        @include tablet {
-            flex-direction: row;
-        }
-        @include elements-glutter;
-        .parts {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            .search_input {
-               flex:1;  
-            }
-            @include elements-glutter;
-            &:nth-child(1){
-                .profile_photo{
-                  @include tablet{
-                    display: none;
-                  }   
-                }
-            }
-            &:nth-child(2){
-                .profile_photo{
-                    display: none;
-                    @include tablet{
-                        display: inline-block;
-                    }
-                }
-            }
-        }
-        
-    }
-     
+  }
 }

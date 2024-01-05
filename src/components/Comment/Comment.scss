@@ -2,28 +2,33 @@
 @use "../../styles/partials/mixins" as *;
 
 .other-comment {
-  border-top: 1px solid $BrainFlix-Mercury;
+  border-bottom: 1px solid $BrainFlix-Mercury;
+  @include desktop {
+    &:last-child {
+      border-bottom: none;
+    }
+  }
   @include sub-container;
   display: flex;
- 
+
   .user-profile {
     display: flex;
     align-items: flex-start;
   }
   .user-conversation {
-    gap:10px;
-    &__header{
+    gap: 10px;
+    &__header {
       h2 {
         color: $BrainFlix-Black;
       }
-      p{
-        color:$BrainFlix-Silver;
+      p {
+        color: $BrainFlix-Silver;
       }
       display: flex;
       justify-content: space-between;
     }
 
-    &__body{
+    &__body {
       color: $BrainFlix-Black;
     }
     display: flex;

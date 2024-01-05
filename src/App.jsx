@@ -1,18 +1,18 @@
 import './App.scss';
 import CommentSection from './components/CommentSection/CommentSection';
 import Header from './components/Header/Header';
+import NextVideosSection from './components/NextVideosSection/NextVideosSection';
 import VideoDetail from './components/VideoDetailSection/VideoDetailSection';
 import VideoPlayer from './components/VideoPlayer/VideoPlayer';
-import allVideos from "./data/video-details.json"
+import allVideosDetail from "./data/video-details.json";
+import allVideoNext from "./data/videos.json"
 function App() {
-  const currentVideo ={
-    "id": "84e96018-4022-434e-80bf-000ce4cd12b8",
-    "title": "BMX Rampage: 2021 Highlights",
-    "channel": "Red Cow",
-    "image": "https://project-2-api.herokuapp.com/images/image0.jpg"
-  }
 
-  const currentVideoDetail = allVideos[0];
+
+
+  const currentVideo = allVideoNext[0]
+
+  const currentVideoDetail = allVideosDetail[0];
 
   
   return (
@@ -21,6 +21,7 @@ function App() {
      <VideoPlayer video={currentVideo}/>
      <VideoDetail video={currentVideoDetail} />
      <CommentSection commentList={currentVideoDetail.comments} />
+     <NextVideosSection videoList={allVideoNext} />
 
     </div>
   );

@@ -2,9 +2,9 @@
 import React from 'react';
 import './FormButton.scss';
 
-const FormButton = ({ icon, text, onClick }) => {
+const FormButton = ({ className, icon, text, onClick }) => {
   return (
-    <button className="button" onClick={onClick}>
+    <button className={`button ${className}`} onClick={onClick}>
       {icon && <span className="icon">{icon}</span>}
       <span className="text">{text}</span>
     </button>

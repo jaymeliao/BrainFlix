@@ -2,7 +2,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .comment-form {
-
+  border-bottom: 1px solid $BrainFlix-Mercury;
   @include sub-container;
   display: flex;
   .user-profile {
@@ -28,11 +28,12 @@
     }
     &__input-section {
       display: flex;
+      justify-items: flex-end;
       flex: 1;
       flex-direction: column;
       .comment_input {
         @include tablet {
-          height: 24px;
+          height: 25px;
           
         }
   
