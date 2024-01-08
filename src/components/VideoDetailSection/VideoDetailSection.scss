@@ -1,14 +1,14 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 .video-details-section {
-  @include regular-container(true);
+  @include regular-container(true, $pos:"left");
   .info-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 24px;
     margin-bottom: 24px;
-    @include sub-container;
+    @include sub-container($pos:"left");
     border-top: 1px solid $BrainFlix-Mercury;
     border-bottom: 1px solid $BrainFlix-Mercury;
     @include tablet {

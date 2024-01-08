@@ -8,7 +8,7 @@
       border-bottom: none;
     }
   }
-  @include sub-container;
+  @include sub-container($pos:"left");
   display: flex;
 
   .user-profile {

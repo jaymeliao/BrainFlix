@@ -18,8 +18,14 @@
   font-weight: $font-weight;
 }
 
-@mixin container-layout($padding-top, $padding-bottom, $padding, $gutter) {
-  padding: $padding-top $padding $padding-bottom $padding;
+@mixin container-layout(
+  $padding-top,
+  $padding-bottom,
+  $padding-left,
+  $padding-right,
+  $gutter
+) {
+  padding: $padding-top $padding-right $padding-bottom $padding-left;
   gap: $gutter;
 
   > * {
@@ -27,37 +33,93 @@
   }
 }
 // regular container without headline by default;
-@mixin regular-container($hasHeadline: false) {
+@mixin regular-container($hasHeadline: false, $pos: "center") {
   //mobile mode
   @if $hasHeadline {
-    @include container-layout(24px, 16px, 16px, 16px);
+    @include container-layout(24px, 16px, 16px, 16px, 16px);
   } @else {
-    @include container-layout(16px, 16px, 16px, 16px);
+    @include container-layout(16px, 16px, 16px, 16px, 16px);
   }
   //desktop/tablet
   @include tablet {
     @if $hasHeadline {
-      @include container-layout(36px, 24px, 24px, 24px);
+      @include container-layout(36px, 24px, 24px, 24px, 24px);
     } @else {
-      @include container-layout(24px, 24px, 24px, 24px);
+      @include container-layout(24px, 24px, 24px, 24px, 24px);
     }
   }
 
   @include desktop {
-    @if $hasHeadline {
-      @include container-layout(48px, 32px, calc(10vw - 90px), 24px);
+    @if $pos== "left" {
+      @if $hasHeadline {
+        @include container-layout(48px, 32px, calc(10vw - 90px), 0px, 24px);
+      } @else {
+        @include container-layout(32px, 32px, calc(10vw - 90px), 0px, 24px);
+      }
+    } @else if $pos== "right" {
+      @if $hasHeadline {
+        @include container-layout(48px, 32px, 0px, calc(10vw - 90px), 24px);
+      } @else {
+        @include container-layout(32px, 32px, 0px, calc(10vw - 90px), 24px);
+      }
     } @else {
-      @include container-layout(32px, 32px, calc(10vw - 90px), 24px);
+      @if $hasHeadline {
+        @include container-layout(
+          48px,
+          32px,
+          calc(10vw - 90px),
+          calc(10vw - 90px),
+          24px
+        );
+      } @else {
+        @include container-layout(
+          32px,
+          32px,
+          calc(10vw - 90px),
+          calc(10vw - 90px),
+          24px
+        );
+      }
     }
   }
 }
 
-@mixin sub-container {
-  @include container-layout(24px, 24px, 0px, 16px);
+@mixin sub-container($pos: "center") {
+  @include container-layout(24px, 24px, 0px, 0px, 16px);
   @include tablet {
-    @include container-layout(24px, 24px, 0px, 24px);
+    @include container-layout(24px, 24px, 0px, 0px, 24px);
+  }
+
+  @include desktop {
+    @if $pos == "left" {
+      @include container-layout(24px, 24px, 0px, 24px, 24px);
+    }
+    @if $pos == "right" {
+      @include container-layout(24px, 24px, 24px, 0px, 24px);
+    }
   }
 }
+
+@mixin sub-container-flexItem($pos: "center") {
+  @include container-layout(24px, 0px, 0px, 0px, 16px);
+  @include tablet {
+    @include container-layout(24px, 0px, 0px, 0px, 24px);
+  }
+
+  @include desktop {
+    @if $pos == "left" {
+      @include container-layout(24px, 0px, 0px, 24px, 24px);
+    }
+    @if $pos == "right" {
+      @include container-layout(24px, 0px, 24px, 0px, 24px);
+    }
+  }
+}
+
+
+
+
+
 
 @mixin elements-glutter {
   gap: 16px;

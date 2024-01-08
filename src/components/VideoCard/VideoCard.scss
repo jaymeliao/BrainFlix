@@ -2,7 +2,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .video-card {
-  @include sub-container;
+  @include sub-container-flexItem($pos:right);
   display: flex;
   max-width: 500px;
 

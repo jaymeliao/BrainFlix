@@ -2,9 +2,17 @@
 @use "../../styles/partials/mixins" as *;
 
 .next-videos{
-    @include regular-container;
+    
+    @include regular-container($pos:"right");
+    @include desktop {
+        min-width: 550px;
+    }
+    
     .session-title{
         color : $BrainFlix-Silver;
         text-transform: uppercase;
+        @include desktop{
+            padding-left: 24px;
+        }
     }
 }
