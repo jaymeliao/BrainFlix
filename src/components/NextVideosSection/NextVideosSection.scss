@@ -2,12 +2,10 @@
 @use "../../styles/partials/mixins" as *;
 
 .next-videos{
-    
     @include regular-container($pos:"right");
     @include desktop {
         min-width: 550px;
     }
-    
     .session-title{
         color : $BrainFlix-Silver;
         text-transform: uppercase;

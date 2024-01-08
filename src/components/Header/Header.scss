@@ -3,7 +3,9 @@
 
 .header {
   @include regular-container;
-
+  .navlink-logo {
+    text-align: center;
+  }
   display: flex;
   flex-direction: column;
   @include tablet {
@@ -32,6 +34,10 @@
       .search_input {
         flex: 1;
       }
+      .navlink-button{
+        display: flex;
+        width: 100%;
+      }
       @include elements-glutter;
       &:nth-child(1) {
         .profile_photo {
@@ -56,3 +62,6 @@
     }
   }
 }
+
+
+

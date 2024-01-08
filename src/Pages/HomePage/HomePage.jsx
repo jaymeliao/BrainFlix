@@ -24,7 +24,6 @@ function HomePage() {
 
   return (
     <>
-      <Header />
       <VideoPlayer video={currentVideoDetail} />
       <div className="container">
         <div className="container__left">

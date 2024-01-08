@@ -6,8 +6,9 @@ import mohan_muruge from "../../assets/images/Mohan-muruge.jpg";
 import uploadIcon from "../../assets/icons/upload.svg";
 import FormButton from "../Form/FormButton/FormButton";
 import FormInput from "../Form/FormInput/FormInput";
-import icon from "../../assets/icons/search.svg"
-
+import icon from "../../assets/icons/search.svg";
+import { NavLink } from "react-router-dom";
+import NoStyleNavLink from "../NoStyleNavLink/NoSyleNavLink";
 
 function Header() {
   const handleSummit = () => {
@@ -16,7 +17,10 @@ function Header() {
 
   return (
     <div className="header">
-      <img className="logo" src={logo} alt="Brain Flix Logo" />
+      <NavLink to="/" className="navlink-logo">
+        <img className="logo" src={logo} alt="Brain Flix Logo" />
+      </NavLink>
+
       <div className="search_bar">
         <div className="parts parts--left">
           <FormInput
@@ -33,12 +37,14 @@ function Header() {
           />
         </div>
         <div className="parts">
-          <FormButton
-            className="search-button"
-            icon={<img src={uploadIcon} />}
-            text="Upload"
-            onClick={handleSummit}
-          />
+          <NoStyleNavLink to="/upload" className="navlink-button">
+            <FormButton
+              className="search-button"
+              icon={<img src={uploadIcon} />}
+              text="Upload"
+              onClick={handleSummit}
+            />
+          </NoStyleNavLink>
           <Avatar
             className="profile_photo"
             imageUrl={mohan_muruge}

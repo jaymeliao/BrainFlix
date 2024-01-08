@@ -1,0 +1,9 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+.not-found-section {
+
+    @include regular-container;
+    .go-home-button{
+        margin: 16px 0px;
+    }
+}

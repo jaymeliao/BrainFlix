@@ -1,0 +1,85 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+.upload-video-section{
+    @include regular-container;
+    border-top: 1px solid $BrainFlix-Mercury;
+    .section-title {
+        padding-top: 16px;
+        // padding-bottom: 16px;
+        color: $BrainFlix-Black;
+      
+        @include tablet{
+            font-size: 48px;
+            border-bottom: 1px solid $BrainFlix-Mercury;
+            padding-top: 32px;
+            padding-bottom: 48px;
+        }
+   
+    }
+    .upload-form{
+        display: flex;
+        flex-direction: column;
+        @include tablet{
+          border-bottom: 1px solid $BrainFlix-Mercury;
+        }
+       
+        @include sub-container;
+        @include desktop{
+            flex-direction: row;
+        }
+        .video-info-input{
+
+            display: flex;
+            flex-direction: column;
+            flex:1;
+            @include container-layout(0px, 0px, 0px, 0px, 16px);
+            @include tablet {
+                padding-bottom: 16px;
+            }
+            @include desktop {
+                justify-content: space-between;
+                @include container-layout(0px, 0px, 12px, 0px, 16px);
+                padding-bottom: 16px;
+               
+            }
+            
+        }
+        .form-item {
+            display: flex;
+            flex-direction: column;
+            
+            label {
+                color: $BrainFlix-Silver;
+            }
+            .thumbnail{
+                flex: 1;
+                height:285px;
+                object-fit: cover;
+                border-radius: 7px;
+                @include tablet {
+                    width: 520px;
+                    height:285px;
+                }
+                @include desktop {
+                    width: 400px;
+                    padding-bottom: 16px;
+                    
+                   
+                }
+                &__image{
+                    width: 100%;
+                    height: 100%;
+                    border-radius:7px;
+                }
+            }
+            .form-input{
+                padding:0.5rem;
+                &--description{
+                    height: 100px;
+                }
+            }
+        }
+   
+    }
+
+}
