@@ -81,5 +81,33 @@
         }
    
     }
+    .upload-buttons{
+        
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        @include sub-container;
+        @include tablet{
+            margin-left: auto;
+            width: 500px;
+            flex-direction: row;
+        }
+        .publish-button{
+            width: 100%;
+            order: 1;
+            @include tablet {
+                order: 2;
+            }
+         
+        }
+        .cancel-button{
+            width: 100%;
+            order:2;
+            @include tablet {
+                order: 1;
+            }
+           
+        }
+    }
 
 }

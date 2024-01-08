@@ -3,8 +3,10 @@ import React from "react";
 import "./UploadPage.scss";
 import imageUrl from "../../assets/images/Upload-video-preview.jpg";
 import FormInput from "../../components/Form/FormInput/FormInput";
+import FormButton from "../../components/Form/FormButton/FormButton";
+import publishIcon from "../../assets/icons/publish.svg";
 
-function Upload(props) {
+function UploadPage(props) {
   return (
     <section className="upload-video-section">
       <h1 className="section-title">Upload Video</h1>
@@ -36,8 +38,12 @@ function Upload(props) {
           </div>
         </div>
       </div>
+      <div className="upload-buttons">
+        <FormButton className="cancel-button" text="Cancel" backgroundColor="white" textColor="#0095FF"   />
+        <FormButton className="publish-button"  text="Publish" icon={<img src={publishIcon} />} />
+      </div>
     </section>
   );
 }
 
-export default Upload;
+export default UploadPage;
