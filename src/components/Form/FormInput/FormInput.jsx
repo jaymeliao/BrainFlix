@@ -3,8 +3,8 @@ import "./FormInput.scss";
 
 const FormInput = (props) => {
   
-  const otherStyle = props.iconImage ? {
-    backgroundImage: `url(${props.iconImage})`,
+  const otherStyle = props.icon ? {
+    backgroundImage: `url(${props.icon})`,
     paddingLeft: '3rem',
     backgroundSize: '24px',
     backgroundPosition: '15px center',
