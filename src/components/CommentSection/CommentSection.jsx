@@ -5,12 +5,12 @@ import "./CommentSection.scss";
 import CommentForm from "../CommentForm/CommentForm";
 import CommentList from "../CommentList/CommentList";
 
-const CommentSection = ({ commentList }) => {
+const CommentSection = ({ video }) => {
   return (
     <div className="comment-section">
-      <h2>{commentList.length} Comments</h2>
+      <h2>{video?video.comments.length:0} Comments</h2>
       <CommentForm />
-      <CommentList commentList={commentList} />
+      <CommentList commentList={video?video.comments:[]} />
     </div>
   );
 };

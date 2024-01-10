@@ -5,7 +5,7 @@ import React from "react";
 
 function VideoCard({ id, imageUrl, title, channel }) {
   return (
-    <Link to={`/videos/${id}`} style={{ display: "block", textDecoration: "none" }}>
+    <Link to={`/videos/${id}`} style={{ display: "block", textDecoration: "none", color:"black" }}>
       <div className="video-card">
         <img className="video-card__thumbnail" src={imageUrl} />
         <div className="video-card__info">
