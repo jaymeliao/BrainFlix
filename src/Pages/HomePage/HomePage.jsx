@@ -10,7 +10,8 @@ import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import axios from "axios";
 
 const api_key = "7a08a145-babe-40d2-88dc-db2dd7fd7d14";
-const API_URL = "https://project-2-api.herokuapp.com/";
+//const API_URL = "https://project-2-api.herokuapp.com/";
+const API_URL = "http://localhost:5050/"
 
 function HomePage() {
   const [currentVideo, setCurrentVideo] = useState(null);
